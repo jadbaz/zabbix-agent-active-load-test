@@ -6,15 +6,24 @@ DIR="$(dirname ${SCRIPT_FULL_PATH})"
 cd "$DIR"
 ######################################################
 
-USAGE="$0 <total_agents>"
+USAGE="$0 <start> <end>"
 
-N=$1
-re='^[0-9]+$'
-if ! [[ $N =~ $re ]] ; then
-   echo "USAGE: $USAGE" >&2; exit 1
+start=1
+end=1
+
+if [ -n "$1" ] && [ "$1" -eq "$1" ] 2>/dev/null; then
+  start=$1
+else
+  echo "USAGE: $USAGE"; exit 1
 fi
 
-for i in `seq 1 $N`
+if [ -n "$2" ] && [ "$2" -eq "$2" ] 2>/dev/null; then
+  end=$2
+else
+  echo "USAGE: $USAGE"; exit 1
+fi
+
+for i in `seq $start $end`
 do
    sh $DIR/stop_instance.sh $i
 done

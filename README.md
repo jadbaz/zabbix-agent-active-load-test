@@ -5,8 +5,8 @@ Run N zabbix agent-active Docker containers on the same host in order to perform
 
 ## Instructions
 - Set configuration (below)
-- Start load test: `sh start_load_test.sh <N>`
-- Stop load test: `sh stop_load_test.sh <N>`
+- Start load test: `sh start_load_test.sh <start> <end>`
+- Stop load test: `sh stop_load_test.sh <start> <end>`
 
 ## Configuration
 - Mandatory: copy the .env.default to .env and change configuration according to your environment
