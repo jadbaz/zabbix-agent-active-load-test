@@ -1,3 +1,9 @@
 ZABBIX_AGENT_DOCKER_IMAGE=zabbix/zabbix-agent:alpine-4.4-latest
+
 DOCKER_CONTAINER_NAME_PREFIX=load_test_agent_
 AGENT_HOST_NAME_PREFIX=load_test_agent_
+
+DOCKER_CONTAINER_TRAPPER_NAME_PREFIX=load_test_trapper_
+TRAPPER_HOST_NAME_PREFIX=load_test_trapper_
+TRAPPER_KEY=trapper1
+TRAPPER_VALUE=1
